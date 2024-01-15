@@ -301,8 +301,8 @@ class Bilibili:
                 self._session.cookies.set(name, value, domain=".bilibili.com")
         self.access_token = kwargs.get("access_token", "")
         self.refresh_token = kwargs.get("refresh_token", "")
-        self.username = "19878639889"
-        self.password = "tegry100"
+        self.username = kwargs.get("username", "")
+        self.password = kwargs.get("password", "")
         force_refresh_token = kwargs.get("force_refresh_token", False)
         if (not force_refresh_token or not self.access_token or not self.refresh_token) and all(key in self.get_cookies() for key in ["bili_jct", "DedeUserID", "DedeUserID__ckMd5", "sid", "SESSDATA"]) and by_cookie():
             return True
