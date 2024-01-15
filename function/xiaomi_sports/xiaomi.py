@@ -127,7 +127,7 @@ def main(_user, _passwd, _step):
 
     today = time.strftime("%F")
 
-    // 20240115
+    # 20240115
     today2 = time.localtime().tm_wday
     if today2 == 5:
         _step = str(random.randint(12000, 17999))
