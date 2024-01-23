@@ -131,10 +131,14 @@ def main(_user, _passwd, _step):
     today2 = time.localtime().tm_wday
     Q_dis = random.randint(5001, 6001)
     Q_cal = random.randint(301, 401)
+    Q_WalkTime = random.randint(65, 80)
+    Q_RunTime = random.randint(5, 10)
     if today2 == 5:
         _step = str(random.randint(12000, 17999))
         Q_dis = random.randint(12001, 17999)
         Q_cal = random.randint(801, 901)
+        Q_WalkTime = random.randint(155, 180)
+        Q_RunTime = random.randint(15, 30)
     
 
     summary = {
@@ -159,8 +163,8 @@ def main(_user, _passwd, _step):
             "ttl": _step,
             "dis": Q_dis,
             "cal": Q_cal,
-            "wk": 41,
-            "rn": 50,
+            "wk": Q_WalkTime,
+            "rn": Q_RunTime,
             "runDist": 7654,
             "runCal": 397,
             "stage": [
