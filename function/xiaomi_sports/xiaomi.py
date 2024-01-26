@@ -340,7 +340,7 @@ def main(_user, _passwd, _step):
 
     response = requests.post(url, data=data, headers=head).json()
     # print(response)
-    result = f"{user[:4]}****{user[-4:]}: [{now}] 修改步数（{step}）" + response['message']
+    result = f"{user[:4]}****{user[-4:]}: [{now}] 修改步数（{_step}）" + response['message']
     print(result)
     return result
 
