@@ -133,7 +133,7 @@ def main(_user, _passwd, _step):
     Q_cal = random.randint(301, 401)
     Q_WalkTime = random.randint(65, 80)
     Q_RunTime = random.randint(5, 10)
-    if today2 == 5 or today2 == 6:
+    if today2 == 6:
         _step = str(random.randint(12000, 17999))
         Q_dis = random.randint(12001, 17999)
         Q_cal = random.randint(801, 901)
