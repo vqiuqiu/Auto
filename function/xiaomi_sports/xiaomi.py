@@ -342,6 +342,18 @@ def main(_user, _passwd, _step):
     # print(response)
     result = f"{user[:4]}****{user[-4:]}: [{now}] 修改步数（{_step}）" + response['message']
     print(result)
+
+    url_douluo = 'https://www.douluoyun.lol/user/checkin'
+    head_douluo = {
+        "accept": "application/json, text/javascript, */*; q=0.01",
+        "cookie": "_ga=GA1.2.474091010.1670661975; lang=zh-cn; uid=465; email=tegry%40126.com; "
+                  "key=3688c649dca584ab08283b4c1dca902e7dc3e060f1b6b; ip=30d0c03e8d5326e0c8b10abf93ba8bde; "
+                  "expire_in=1724720919; cnxad_lunbo=yes; _gid=GA1.2.167584846.1724634521; _gat=1; "
+                  "_gat_gtag_UA_123456789_1=1 "
+    }
+    response_douluo = requests.post(url_douluo, headers=head_douluo).json()
+    print(response_douluo)
+    
     return result
 
 
